@@ -1,21 +1,12 @@
-
 @extends('layout')
 
 @section('title', 'Edit Item')
 
 @section('content')
-    <h1>Edit Item</h1>
+    <h1>Modifier un Item</h1>
     <form action="{{ route('items.update', $item->id) }}" method="POST">
         @csrf
         @method('PUT')
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" value="{{ $item->name }}" required>
-        </div>
-        <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" id="description" name="description" required>{{ $item->description }}</textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <x-item-form :item="$item" buttonText="Modifier"></x-item-form>
     </form>
 @endsection

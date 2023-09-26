@@ -21,8 +21,9 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'name'=> 'required|max:255',
+            'name'=> 'required|max:50',
             'description'=>'required',
+            'date_field'=>'required|date',
         ]);
         Item::create($validated);
         return redirect()->route('items.index');
@@ -38,7 +39,8 @@ class ItemController extends Controller
     {
         $validated = $request->validate([
             'name'=>'required|max:255',
-            'description'=>'required'
+            'description'=>'required',
+            'date_field'=>'required|date',
         ]);
 
         $item = Item::findOrFail($id);

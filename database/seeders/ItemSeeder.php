@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -15,9 +16,9 @@ class ItemSeeder extends Seeder
     {
 
         $items = [
-            ['name' => 'Item1', 'description' => 'Description1'],
-            ['name' => 'Item2', 'description' => 'Description2'],
-            ['name' => 'Item3', 'description' => 'Description3'],
+            ['name' => 'Item1', 'description' => 'Description1','date_field'=>Carbon::now()],
+            ['name' => 'Item2', 'description' => 'Description2','date_field'=>Carbon::now()],
+            ['name' => 'Item3', 'description' => 'Description3','date_field'=>Carbon::now()],
             // Add more items here
         ];
 
