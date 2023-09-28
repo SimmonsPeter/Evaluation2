@@ -11,7 +11,7 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Laravel Project</a>
+        <a class="navbar-brand" href="{{ route('items.index') }}">Liste d'items</a>
     </div>
 </nav>
 <!-- End Navbar -->
